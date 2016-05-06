@@ -16,6 +16,8 @@ WORKDIR /kb/module
 
 RUN make
 
+RUN pip freeze | grep requests
+
 ENTRYPOINT [ "./scripts/entrypoint.sh" ]
 
 CMD [ ]
